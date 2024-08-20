@@ -16,7 +16,7 @@ function Layout({ title, children }: Props) {
 
       <Navbar />
       <LayoutAnimation>
-        <main className="max-w-screen-lg w-full mx-auto">{children}</main>
+        <main className="max-w-screen-lg w-full mx-auto p-4">{children}</main>
         <Footer />
       </LayoutAnimation>
     </main>

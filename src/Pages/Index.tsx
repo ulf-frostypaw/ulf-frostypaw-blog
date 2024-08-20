@@ -21,8 +21,8 @@ function Index() {
   >([]);
   return (
     <Layout title="Home">
-      <section className="flex gap-4 pb-4 items-center">
-        <div>
+      <section className="gap-4 pb-4 items-center lg:grid-cols-3 sm:grid-cols-1 grid">
+        <div className="lg:col-span-2">
           <h2 className="font-bold">Hola, soy</h2>
           <h1>Ulf FrostyPaw.</h1>
           <p>
@@ -39,12 +39,13 @@ function Index() {
             <span className="font-bold">fácil, eficiente y ágil.</span>
           </p>
         </div>
-        <LazyLoadImage
-        src={import.meta.env.VITE_APP_URL + "/perfil.webp"}
-        className="rounded-full max-w-[40%] aspect-square shadow-md"
-        alt="Quirino Emmanuel selfie"
-        />
-        
+        <div className="flex justify-end">
+          <LazyLoadImage
+            src={import.meta.env.VITE_APP_URL + "/perfil.webp"}
+            className="rounded-full lg:max-w-full md:max-w-sm sm:max-w-sm aspect-square shadow-md"
+            alt="Quirino Emmanuel selfie"
+          />
+        </div>
       </section>
       <Hgroup text="Proyectos recientes" />
       <div className="grid lg:grid-cols-3 gap-4 md:grid-cols-2 sm:grid-cols-1">

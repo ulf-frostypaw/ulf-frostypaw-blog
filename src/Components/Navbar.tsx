@@ -1,8 +1,8 @@
 import NavLink from "./tools/NavLink";
 function Navbar() {
   return (
-    <nav className="w-full sticky top-0 bg-white shadow-md mb-4 z-50">
-      <header className="max-w-screen-lg mx-auto flex items-center justify-between py-8">
+    <nav className="w-full sticky bg-white shadow-md mb-4 z-50">
+      <header className="max-w-screen-lg mx-auto flex items-center justify-between py-8 px-4">
         <div>
           <h1>
             <NavLink to={"/"}>Ulf FrostyPaw</NavLink>
