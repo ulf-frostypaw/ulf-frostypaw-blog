@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/pache.webp" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ulf FrostyPaw</title>
+    <style>
+      #loading {
+        transition-duration: 500ms;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        z-index: 9999;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loading">
+      <img src="/pache.webp" style="max-width: 6rem" alt="Loading app..." />
+    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      window.addEventListener("load", function () {
+        // hide icon loadin
+        const loadingScreen = document.getElementById("loading");
+        loadingScreen.style.display = "none";
+      });
+    </script>
+  </body>
+</html>

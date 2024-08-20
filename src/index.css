@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-3xl font-black;
+  }
+  h2 {
+    @apply text-xl;
+  }
+}
+
+@layer components {
+  .fixFooter {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    gap: 1rem;
+    grid-auto-flow: dense;
+}
+
+.grid-container img {
+    width: 100%; /* Asegura que las imágenes ocupen el 100% del ancho del contenedor */
+    height: 100%; /* Asegura que las imágenes ocupen el 100% de la altura del contenedor */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra interna */
+    transition-duration: 500ms; /* Duración de la transición */
+    object-fit: cover; /* Mantiene la relación de aspecto de la imagen */
+}
+
+.grid-container img:hover {
+    opacity: 0.7; /* Efecto de hover */
+}
+
+/* Asignar la clase 'wide' al 3er, 6to, 9no, etc. hijo */
+.grid-container img:nth-child(3n + 3) {
+    grid-column: span 2; /* Ocupa 2 columnas */
+}
+
+/* Asignar la clase 'tall' al 1er, 5to, 9no, etc. hijo */
+.grid-container img:nth-child(4n + 1) {
+    grid-row: span 2; /* Ocupa 2 filas */
+}
+}
